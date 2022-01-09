@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Showing Data, {{user.username}}!
+</h1>
+<div>
+<div class="column is-4 is-offset-4">
+    <div class="box">
+            <div class="field">
+                <div class="control">
+                    <label for="address">Address:</label>
+                    <p>{{user.address}}</p>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label for="email">Email:</label>
+                    <p>{{user.email}}</p>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label for="phonenumber">Phone Number:</label>
+                    <p>{{user.phone}}</p>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label for="feedback">Feedback:</label>
+                    <p>{{user.feedback}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

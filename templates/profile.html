@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, {{ name }}!
+</h1>
+<div>
+<div class="column is-4 is-offset-4">
+    <div class="box">
+        <form method="POST" action="/profile">
+            <div class="field">
+                <div class="control">
+
+                    <dl>
+                         {{ form.hidden_tag() }}
+                        {{ form.address.label }} {{ form.address(size=20) }}<br>
+                        {{ form.email.label }} {{ form.email(size=20) }}<br>
+                        {{ form.phonenumber.label }} {{ form.phonenumber(size=20) }} <br>
+                        {{ form.feedback.label }}{{ form.feedback(size=20) }}<br>
+                        {{ form.submit }}
+                    </dl>
+                    <!--<label for="address">Address:</label>
+                    <input type="text" id="address" name="address">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <label for="phonenumber">Phone Number:</label>
+                    <input type="text" id="phonenumber" name="phonenumber">
+                </div>
+            </div>
+
+           <div class="field">
+                <div class="control">
+                    <label for="feedback">Feedback:</label>
+                    <input type="text" id="feedback" name="feedback">
+                </div>
+           </div>
+            <input type="submit" id="submit" placeholder="SUBMIT" name="submit">-->
+                </div></div>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
